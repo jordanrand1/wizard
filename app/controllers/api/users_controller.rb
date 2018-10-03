@@ -1,4 +1,9 @@
 class Api::UsersController < ApplicationController
+
+  def like
+    tags = current_user.tags.map(&:name)
+  end
+
   def update
     user = User.find(params[:id])
     user.name = params[:name] ? params[:name] : user.name
