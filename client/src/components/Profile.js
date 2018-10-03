@@ -11,6 +11,8 @@ import {
 import { connect } from 'react-redux'
 import Dropzone from 'react-dropzone'
 import { updateUser } from '../reducers/user'
+import Tags from './Tags'
+import TagForm from './TagForm';
 
 const defaultImage = 'https://d30y9cdsu7xlg0.cloudfront.net/png/15724-200.png'
 
@@ -139,6 +141,10 @@ class Profile extends React.Component {
                 { editing ? 'Cancel' : 'Edit' }
               </Button>
             </Grid.Column>
+            <Grid.Column width={16}>
+              <TagForm/>
+            </Grid.Column>
+
           </Grid.Row>
         </Grid>
       </Container>
